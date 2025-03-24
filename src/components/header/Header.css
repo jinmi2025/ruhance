@@ -1,5 +1,10 @@
 /* Header.css */
 
+#header {
+    position: relative;
+    z-index: 600;
+}
+
 #header .inner {
     display: flex;
     justify-content: space-between;
@@ -69,7 +74,6 @@
         width: 1664px;
         height: 120px;
         margin: 0 auto;
-        background-color: #665e54;
     }
 
     #header .logo {
