@@ -55,9 +55,8 @@ const data = [
 ];
 
 const BtnNext = (props) => {
-    const { onClick, currentSlide, slideCount, slidesToShow } = props;
-    console.log(slidesToShow);
-    const disabled = currentSlide == slideCount - slidesToShow;
+    const { onClick, currentSlide, } = props;
+    const disabled = currentSlide == data.length - 1;
 
     return (
         <p className="BtnNext">

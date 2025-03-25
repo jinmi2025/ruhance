@@ -30,3 +30,10 @@
 .Carousel124 .BtnNext button:disabled {
     opacity: 0;
 }
+
+@media screen and (min-width:1280px) {
+    .Carousel124 {
+        width: 1664px;
+        margin: 0 auto 120px auto;
+    }
+}

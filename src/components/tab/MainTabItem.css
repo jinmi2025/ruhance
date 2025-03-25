@@ -1,0 +1,152 @@
+/* MainTabItem.css */
+
+.MainTabItem {
+    margin: 40px 0;
+    padding: 0 16px;
+}
+
+.MainTabItem h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.MainTabItem .tab-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.MainTabItem .tab-btn p {
+    box-sizing: border-box;
+    width: calc((100% - 12px) / 2);
+}
+
+.MainTabItem label {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+}
+
+.MainTabItem .active label {
+    background-color: #1682ff;
+    color: #fff;
+}
+
+.MainTabItem .tab-btn img {
+    width: 80px;
+}
+
+.MainTabItem .tab-btn span {
+    display: block;
+    font-size: 16px;
+}
+
+.MainTabItem .tab-content .box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+}
+
+.MainTabItem .tab-content label {
+    background-color: #fff;
+}
+
+.MainTabItem .tab-content .active label {
+    background-color: #1682ff;
+}
+
+.MainTabItem .tab-content .box .cel4,
+.MainTabItem .tab-content .box .cel2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.MainTabItem .tab-content .box .cel3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.MainTabItem .tab-content p {
+    width: calc((100% - 8px) / 2);
+}
+
+.MainTabItem .tab-content .box .cel1 p {
+    width: 100%;
+}
+
+.MainTabItem .tab-content .btnSearch {
+    position: relative;
+    width: 160px;
+    margin: 0 auto;
+    padding-bottom: 8px;
+    background-color: #f0f0f0;
+    border-radius: 0 0 24px 24px;
+}
+
+.MainTabItem .tab-content .btnSearch button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 144px;
+    height: 50px;
+    border: 0;
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: #1682ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.MainTabItem .tab-content .btnSearch img {
+    width: 34px;
+}
+
+.MainTabItem .tab-content .btnSearch .left,
+.MainTabItem .tab-content .btnSearch .right {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #f0f0f0;
+}
+
+.MainTabItem .tab-content .btnSearch .left {
+    left: -24px;
+}
+
+.MainTabItem .tab-content .btnSearch .right {
+    right: -24px;
+}
+
+.MainTabItem .tab-content .btnSearch .left::before,
+.MainTabItem .tab-content .btnSearch .right::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.MainTabItem .tab-content .btnSearch .left::before {
+    border-radius: 0 24px 0 0;
+}
+
+.MainTabItem .tab-content .btnSearch .right::before {
+    border-radius: 24px 0 0 0;
+}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { formattedBr } from "../../utills";
 import "slick-carousel/slick/slick.css";
 import './MainSlide.css';
 
@@ -70,15 +71,6 @@ const MainSlide = () => {
         autoplaySpeed: 6000, // 6초마다 플레이
         speed: 1500
     }
-
-    const formattedBr = (sentence) => {
-        return sentence.split('\n').map((line, idx) => (
-            <span key={idx}>
-                {line}
-                <br />
-            </span>
-        ))
-    };
 
     return (
         <div className="MainSlide">

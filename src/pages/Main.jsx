@@ -1,10 +1,12 @@
-import { MainSlide, Carousel124 } from "../components";
+import { MainSlide, Carousel124, MainTabVideo, MainTabItem } from "../components";
 function Main() {
 
     return (
         <div id="main-container">
             <MainSlide />
             <Carousel124 />
+            <MainTabVideo />
+            <MainTabItem />
         </div>
     )
 }
