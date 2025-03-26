@@ -66,16 +66,9 @@
     background-color: #1682ff;
 }
 
-.MainTabItem .tab-content .box .cel4,
-.MainTabItem .tab-content .box .cel2 {
+.MainTabItem .tab-content .box .row {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-}
-
-.MainTabItem .tab-content .box .cel3 {
-    display: flex;
-    flex-direction: column;
     gap: 8px;
 }
 
@@ -83,7 +76,7 @@
     width: calc((100% - 8px) / 2);
 }
 
-.MainTabItem .tab-content .box .cel1 p {
+.MainTabItem .tab-content p.last {
     width: 100%;
 }
 
