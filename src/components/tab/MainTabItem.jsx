@@ -96,7 +96,14 @@ const MainTabItem = () => {
                             {filterOptions[active].map((group, i) => (
                                 <div key={group.name} className='row'>
                                     {group.options.map((opt, idx) => (
-                                        <p key={opt} className={selected[group.stateKey] === opt ? 'active' : '' || idx == 2 ? 'last' : ''}>
+                                        <p
+                                            key={opt}
+                                            className={
+                                                selected[group.stateKey] === opt ? 'active' : ''
+                                                    ||
+                                                    (active == 1 && idx == 2) || (active == 3 && idx == 2) ? 'last' : ''
+                                            }
+                                        >
                                             <label>
                                                 <input
                                                     type="radio"
