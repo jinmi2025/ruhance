@@ -81,6 +81,11 @@
 }
 
 @media screen and (min-width:1280px) {
+    .MainServie .service {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
     .MainServie .service .content {
         width: 1664px;
         margin: 0 auto;
