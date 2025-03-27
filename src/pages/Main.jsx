@@ -1,4 +1,4 @@
-import { MainSlide, Carousel124, MainTabVideo, MainTabItem } from "../components";
+import { MainSlide, Carousel124, MainTabVideo, MainTabItem, MainGuaid, MainServie } from "../components";
 function Main() {
 
     return (
@@ -7,6 +7,8 @@ function Main() {
             <Carousel124 />
             <MainTabVideo />
             <MainTabItem />
+            <MainGuaid />
+            <MainServie />
         </div>
     )
 }

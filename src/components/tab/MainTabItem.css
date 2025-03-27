@@ -76,7 +76,8 @@
     width: calc((100% - 8px) / 2);
 }
 
-.MainTabItem .tab-content p.last {
+.MainTabItem .tab-content .tab-cont1 .box .row:nth-child(1) p:nth-child(3),
+.MainTabItem .tab-content .tab-cont3 .box .row:nth-child(1) p:nth-child(3) {
     width: 100%;
 }
 
@@ -142,4 +143,60 @@
 
 .MainTabItem .tab-content .btnSearch .right::before {
     border-radius: 24px 0 0 0;
+}
+
+@media screen and (min-width:768px) {
+    .MainTabItem {
+        margin: 80px 0;
+        padding: 0 32px;
+    }
+
+    .MainTabItem h2 {
+        margin-bottom: 32px;
+        font-size: 28px;
+    }
+
+    .MainTabItem .tab-btn p {
+        width: calc((100% - 36px) / 4);
+    }
+
+    .MainTabItem .tab-btn label {
+        padding: 52px 0;
+    }
+
+    .MainTabItem .tab-btn span {
+        margin-top: 4px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .MainTabItem .tab-content .tab-cont0 .box .row:nth-child(1) p {
+        width: calc((100% - 24px) / 4);
+    }
+
+    .MainTabItem .tab-content .tab-cont1 .box .row:nth-child(1) p {
+        width: calc((100% - 16px) / 3);
+    }
+
+    .MainTabItem .tab-content .tab-cont3 .box .row p {
+        width: calc((100% - 16px) / 3);
+    }
+
+    .MainTabItem .tab-content .tab-cont1 .box .row:nth-child(1) p:nth-child(3),
+    .MainTabItem .tab-content .tab-cont3 .box .row:nth-child(1) p:nth-child(3) {
+        width: calc((100% - 16px) / 3);
+    }
+
+
+    .MainTabItem .tab-content label {
+        padding: 20px 0;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .MainTabItem {
+        width: 1664px;
+        margin: 120px auto;
+    }
 }

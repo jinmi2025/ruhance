@@ -66,12 +66,21 @@ const filterOptions = {
 
 const MainTabItem = () => {
     const [active, setActive] = useState(0);
-    const [selected, setSelected] = useState(['', '', '', '', '']);
+    const [selected, setSelected] = useState(['정수기', '', '', '', '']);
+
+    const handleTabClick = (idx, label) => {
+        setActive(idx);
+        const filterLength = filterOptions[idx].length;
+        const newSelected = [label, ...Array(filterLength).fill('')];
+        setSelected(newSelected);
+    };
 
     const handleChange = (index, value) => {
-        const updated = [...selected];
-        updated[index] = value;
-        setSelected(updated);
+        setSelected(prev => {
+            const updated = [...prev];
+            updated[index + 1] = (prev[index + 1] === value) ? '' : value; // 토글!
+            return updated;
+        });
     };
 
     return (
@@ -80,7 +89,7 @@ const MainTabItem = () => {
             <div className="tab-btn">
                 {tabOptions.map((tab, idx) => (
                     <p key={idx} className={active === idx ? 'active' : ''}>
-                        <label onClick={() => setActive(idx)}>
+                        <label onClick={() => handleTabClick(idx, tab.label)}>
                             <input type="radio" name="main-type" className="hide" value={tab.label} />
                             <img src={tab.img} alt={tab.label} />
                             <span>{tab.label}</span>
@@ -91,18 +100,14 @@ const MainTabItem = () => {
 
             <div className="tab-content">
                 {(active >= 0) && (
-                    <div className={`tab-cont${active + 1}`}>
+                    <div className={`tab-cont${active}`}>
                         <div className="box">
                             {filterOptions[active].map((group, i) => (
                                 <div key={group.name} className='row'>
                                     {group.options.map((opt, idx) => (
                                         <p
                                             key={opt}
-                                            className={
-                                                selected[group.stateKey] === opt ? 'active' : ''
-                                                    ||
-                                                    (active == 1 && idx == 2) || (active == 3 && idx == 2) ? 'last' : ''
-                                            }
+                                            className={selected[i + 1] === opt ? 'active' : ''}
                                         >
                                             <label>
                                                 <input
@@ -111,7 +116,7 @@ const MainTabItem = () => {
                                                     className="hide"
                                                     value={opt}
                                                     checked={selected[group.stateKey] === opt}
-                                                    onChange={() => handleChange(group.stateKey, opt)}
+                                                    onChange={() => handleChange(i, opt)}
                                                 />
                                                 {opt}
                                             </label>

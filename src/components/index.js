@@ -5,6 +5,8 @@ import MainSlide from "./slides/MainSlide";
 import Carousel124 from "./slides/Carousel124";
 import MainTabVideo from "./tab/MainTabVideo";
 import MainTabItem from "./tab/MainTabItem";
+import MainGuaid from "./banner/MainGuaid";
+import MainServie from "./banner/MainServie";
 
 export {
     Header,
@@ -13,5 +15,7 @@ export {
     MainSlide,
     Carousel124,
     MainTabVideo,
-    MainTabItem
+    MainTabItem,
+    MainGuaid,
+    MainServie
 };
